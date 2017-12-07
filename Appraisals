@@ -13,3 +13,7 @@ end
 appraise 'rails4_2' do
   gem 'rails', '~> 4.2.0'
 end
+
+appraise 'rails5.1' do
+  gem 'rails', '~> 5.1.0'
+end
