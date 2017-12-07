@@ -16,8 +16,10 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
 
   config.before do
-    ActionDispatch::Reloader.cleanup!
-    ActionDispatch::Reloader.prepare!
+    #ActionDispatch::Reloader.cleanup!
+    #ActionDispatch::Reloader.prepare!
+    Rails.application.reloader.reload!
+    Rails.application.reloader.prepare!
 
     connection = ActiveRecord::Base.connection
 
